@@ -12,7 +12,7 @@ describe('finding postal codes by giving a postal district name', () => {
         assert.ok(response.ok, `Server responded with HTTP status ${response.statusCode}`);
         assert.ok(response.body.numbers, 'Response JSON should have attribute `numbers`');
 
-        assert.strictEqual(response.body.numbers, ['99999']);
+        assert.strictEqual(response.body.numbers[0], '99999');
     });
 
     test('Helsinki has multiple postal codes', async () => {
@@ -23,7 +23,7 @@ describe('finding postal codes by giving a postal district name', () => {
         assert.strictEqual(response.body.numbers.includes('99999'), false, `Helsinki should not have postal code 99999.`);
 
         ['00100', '00730'].forEach(number => {
-            assert.strictEqual(response.body.numbers.includes(number), `Helsinki should have postal code ${number}.`);
+            assert.ok(response.body.numbers.includes(number), `Helsinki should have postal code ${number}.`);
         });
     });
 

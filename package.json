@@ -19,6 +19,7 @@
   "homepage": "https://github.com/harjoitukset/nodejs-postalcodes#readme",
   "dependencies": {
     "express": "4",
+    "node-fetch": "^2.6.7",
     "nodemon": "2"
   },
   "devDependencies": {
