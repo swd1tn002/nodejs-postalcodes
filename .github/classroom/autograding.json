@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Osa 1: JSON-tiedoston hakeminen ja parametrin käsittely (3p)",
+      "setup": "npm install",
+      "run": "npm test -t test/district-name-by-postalcode.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "Osa 2: Polun käsittely ja JSON-tietorakenteen läpikäynti (2p)",
+      "setup": "npm install",
+      "run": "npm test -t test/postalcodes-by-name.test.js",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    }
+  ]
+}
