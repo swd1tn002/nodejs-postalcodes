@@ -1,9 +1,7 @@
 const express = require('express');
-
 const { getPostalCodes, getPostalDistrict } = require('./client');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.get('/postalcodes', async function (req, res) {
     let postalCode = req.query.number || '';
